@@ -4,6 +4,7 @@ import vin.gans.data.*;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -15,26 +16,32 @@ public class DataParser {
     public DataParser(Map<String, String> dataForParsing) {
         parseData(dataForParsing);
     }
-    private HashMap<String, ExpressionData> expressionData = new HashMap<>();
-    private HashMap<String, ParsedData> simpleData = new HashMap<>();
+
+    private HashMap<String, ExpressionData> expressionData;
+    private HashMap<String, ParsedData> simpleData;
+
+
 
     private void parseData(Map<String, String> allData){
+        expressionData =  new LinkedHashMap<>();
+        simpleData = new LinkedHashMap<>();
         Map.Entry<String, String> entry;
         Iterator<Map.Entry<String, String>> iterator= allData.entrySet().iterator();
             while(iterator.hasNext()){
                 entry = iterator.next();
                 String expression = entry.getValue();
+                String key = entry.getKey();
                 if(expression.isEmpty()|| expression.matches("^[ ]$")){
-                    simpleData.put(entry.getKey(), new EmptyField());
+                    simpleData.put(key, new EmptyField());
                 }else  if(expression.startsWith("'")){
-                    simpleData.put(entry.getKey(), new TextData(expression.substring(1, expression.length())));
+                    simpleData.put(key, new TextData(expression.substring(1, expression.length())));
                 }else if(IntData.parseInt(expression)){
-                    simpleData.put(entry.getKey(), new IntData(expression));
+                    simpleData.put(key, new IntData(expression));
                 }else if(FloatData.parseFloat(expression)){
-                    simpleData.put(entry.getKey(), new FloatData(expression));
+                    simpleData.put(key, new FloatData(expression));
                 }else if(expression.startsWith("=")){
                     String parsedString = expression.substring(1,expression.length());
-                    expressionData.put(entry.getKey(),new ExpressionData(parsedString));
+                    expressionData.put(key, new ExpressionData(parsedString));
                 }
             }
     }

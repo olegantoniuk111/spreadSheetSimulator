@@ -14,8 +14,8 @@ import java.util.Map;
  */
 public class DataModel {
     public DataModel(String filePath) throws IOException {
-        this.data = buildDataModel(filePath);
-        this.mappedData =buildMapFromModel(this.data);
+        data = buildDataModel(filePath);
+        mappedData =buildMapFromModel(data);
     }
 
     private String[][] data;
@@ -33,7 +33,7 @@ public class DataModel {
         return data;
     }
 
-    private static String[][] buildDataModel(String filepath) throws IOException {
+    private  String[][] buildDataModel(String filepath) throws IOException {
         BufferedReader bufferedReader = null;
         List <String[]> lines = new ArrayList<String[]>();
         try {
@@ -57,7 +57,7 @@ public class DataModel {
      }
 
 
-    private static Map<String, String> buildMapFromModel(String[][] cellData){
+    private  Map<String, String> buildMapFromModel(String[][] cellData){
         Map <String, String> simpleData = new LinkedHashMap<String, String>();
         for (int i = 0; i < cellData.length; i++) {
             for (int j = 0; j < cellData[i].length; j++) {

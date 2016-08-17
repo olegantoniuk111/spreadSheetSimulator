@@ -9,9 +9,10 @@ public class EmptyField implements ParsedData {
     }
 
     @Override
-    public Object getData() {
+    public Object getValue() {
         return "";
     }
+
 
 
 }

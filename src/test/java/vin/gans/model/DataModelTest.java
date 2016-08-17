@@ -3,10 +3,12 @@ package vin.gans.model;
 
 
 import com.sun.xml.internal.ws.policy.AssertionSet;
-import junit.framework.Assert;
-import junit.framework.Assert;
+
+
 import org.junit.Before;
 import org.junit.Test;
+import  org.junit.Assert;
+import org.testng.annotations.BeforeClass;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -20,11 +22,9 @@ import java.util.Set;
 public class DataModelTest {
     public DataModelTest() throws IOException {
     }
-    private  String filePath = "D:\\intellijProjects\\expressionevaluator\\resources\\testResources\\testinput.csv";
-    private DataModel dataModel =  new DataModel(filePath);
-    private  String[][] fileData = dataModel.getDataModel();
+   private  DataModel dataModel = new DataModel(TestData.filePath);
+   private String[][] fileData = dataModel.getDataModel();
     private Map<String, String> mappedData = dataModel.getMappedData();
-
     private String[][] expressions;
     private Map<String, String> mapedExpressions;
 
@@ -33,7 +33,7 @@ public class DataModelTest {
         expressions = new String[][]{{"12", "=C2", "3", "'Sample"},
                 {"=A1+B1*C1/5", "=A2*B1", "=B3-C3", "'Spread"},
                 {"'Test", "=4-3", "5", "'Sheet"}};
-        mapedExpressions = new LinkedHashMap<String, String>();
+        mapedExpressions = new LinkedHashMap<>();
         mapedExpressions.put("A1", "12");
         mapedExpressions.put("B1", "=C2");
         mapedExpressions.put("C1", "3");
@@ -49,7 +49,8 @@ public class DataModelTest {
     }
     @Test
     public void checkingDataFromFile() throws IOException{
-     Assert.assertTrue(Arrays.deepEquals(fileData,expressions));
+        Assert.assertTrue(Arrays.deepEquals(fileData,expressions));
+
     }
 
     @Test
