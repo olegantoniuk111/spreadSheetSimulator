@@ -3,18 +3,18 @@ package vin.gans.model;
 
 
 import com.sun.xml.internal.ws.policy.AssertionSet;
-
-
-import org.junit.Before;
-import org.junit.Test;
-import  org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
 
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
+
+import static com.sun.xml.internal.ws.dump.LoggingDumpTube.Position.Before;
 
 /**
  * Created by DELL on 10.08.2016.
@@ -28,7 +28,7 @@ public class DataModelTest {
     private String[][] expressions;
     private Map<String, String> mapedExpressions;
 
-    @Before
+    @BeforeClass
     public  void setUp() {
         expressions = new String[][]{{"12", "=C2", "3", "'Sample"},
                 {"=A1+B1*C1/5", "=A2*B1", "=B3-C3", "'Spread"},

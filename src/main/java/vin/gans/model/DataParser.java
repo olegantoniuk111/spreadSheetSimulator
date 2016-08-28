@@ -20,8 +20,6 @@ public class DataParser {
     private HashMap<String, ExpressionData> expressionData = new LinkedHashMap<>();
     private HashMap<String, ParsedData> simpleData = new LinkedHashMap<>();
 
-
-
     private void parseData(Map<String, String> allData){
         Map.Entry<String, String> entry;
 
@@ -44,8 +42,6 @@ public class DataParser {
                 }
             }
     }
-
-
     public HashMap<String, ExpressionData> getExpressionData() {
         return this.expressionData;
     }
