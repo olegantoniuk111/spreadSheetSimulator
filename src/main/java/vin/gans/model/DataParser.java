@@ -17,15 +17,14 @@ public class DataParser {
         parseData(dataForParsing);
     }
 
-    private HashMap<String, ExpressionData> expressionData;
-    private HashMap<String, ParsedData> simpleData;
+    private HashMap<String, ExpressionData> expressionData = new LinkedHashMap<>();
+    private HashMap<String, ParsedData> simpleData = new LinkedHashMap<>();
 
 
 
     private void parseData(Map<String, String> allData){
-        expressionData =  new LinkedHashMap<>();
-        simpleData = new LinkedHashMap<>();
         Map.Entry<String, String> entry;
+
         Iterator<Map.Entry<String, String>> iterator= allData.entrySet().iterator();
             while(iterator.hasNext()){
                 entry = iterator.next();
@@ -48,9 +47,9 @@ public class DataParser {
 
 
     public HashMap<String, ExpressionData> getExpressionData() {
-        return expressionData;
+        return this.expressionData;
     }
     public HashMap<String, ParsedData> getSimpleData() {
-        return simpleData;
+        return this.simpleData;
     }
 }

@@ -22,8 +22,8 @@ import java.util.Set;
 public class DataModelTest {
     public DataModelTest() throws IOException {
     }
-   private  DataModel dataModel = new DataModel(TestData.filePath);
-   private String[][] fileData = dataModel.getDataModel();
+    private  DataModel dataModel = new DataModel(TestData.filePath);
+    private String[][] fileData = dataModel.getDataModel();
     private Map<String, String> mappedData = dataModel.getMappedData();
     private String[][] expressions;
     private Map<String, String> mapedExpressions;
@@ -59,6 +59,7 @@ public class DataModelTest {
         Set<Map.Entry<String, String>> entry1 =  mapedExpressions.entrySet();
         Assert.assertEquals(entry,entry1);
     }
+
 
 
 
