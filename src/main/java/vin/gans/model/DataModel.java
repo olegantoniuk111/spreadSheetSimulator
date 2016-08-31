@@ -13,26 +13,22 @@ import java.util.Map;
  * Created by DELL on 09.08.2016.
  */
 public class DataModel {
-    public DataModel(String filePath) throws IOException {
-        data = buildDataModel(filePath);
-        mappedData =buildMapFromModel(data);
-    }
-
     private String[][] data;
-
-    public Map<String, String> getMappedData() {
-        return mappedData;
-    }
 
     private  Map<String, String> mappedData;
     private static  char currentLetter = 'A';
     private static  int currentrow = 1;
 
-
+    public DataModel(String filePath) throws IOException {
+        data = buildDataModel(filePath);
+        mappedData =buildMapFromModel(data);
+    }
+    public Map<String, String> getMappedData() {
+        return mappedData;
+    }
     public String[][] getDataModel() {
         return data;
     }
-
     private  String[][] buildDataModel(String filepath) throws IOException {
         BufferedReader bufferedReader = null;
         List <String[]> lines = new ArrayList<String[]>();
@@ -55,8 +51,6 @@ public class DataModel {
         lines.toArray(data);
         return  data;
      }
-
-
     private  Map<String, String> buildMapFromModel(String[][] cellData){
         Map <String, String> simpleData = new LinkedHashMap<String, String>();
         for (int i = 0; i < cellData.length; i++) {

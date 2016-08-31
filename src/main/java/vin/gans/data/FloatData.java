@@ -16,7 +16,7 @@ public class FloatData implements  ParsedData, Comparable<Float> {
         return data;
     }
     public static boolean parseFloat(String string){
-        return string.matches("^[0-9]+$");
+        return string.matches("^[0-9]+([,]|[.])[0-9]+$");
     }
 
     @Override
