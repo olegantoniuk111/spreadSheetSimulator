@@ -22,11 +22,11 @@ public class Main {
         System.out.println(expressions.toString());
         System.out.println(simpleData.toString());
 
-        String expression = "10,5/7*5+A3";
+        String expression = "10,5/7*5+A3+176.57";
         String result = ExpressionEvaluator.separateExpression(expression);
         System.out.println(result);
 
-        System.out.println(ExpressionEvaluator.isKey("1A"));
+        System.out.println(ExpressionEvaluator.isKey("A23"));
 
 
     }

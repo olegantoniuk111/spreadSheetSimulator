@@ -9,13 +9,13 @@ import java.util.regex.Pattern;
 public class ExpressionEvaluator {
 
     public static boolean isKey(String key){
-        Pattern pattern = Pattern.compile("^[A-Z]+\\d+$");
+        Pattern pattern = Pattern.compile("^[A-Z]+[0-9]+$");
         Matcher matcher = pattern.matcher(key);
-        return matcher.find();
+        return matcher.matches();
     }
 
     public static String separateExpression(String expression) {
-        Pattern pattern = Pattern.compile("(([A-Z]+\\d+)|([0-9]+[,]|[.][0-9])|([0-9]+)|([\\+\\-\\*/\\(\\)]))");
+        Pattern pattern = Pattern.compile("(([A-Z]+\\d+)|([0-9]+([,]|[.])[0-9]+)|([0-9]+)|([\\+\\-\\*/\\(\\)]))");
         Matcher m = pattern.matcher(expression);
         StringBuilder out = new StringBuilder(expression.length());
         while (m.find()) {
