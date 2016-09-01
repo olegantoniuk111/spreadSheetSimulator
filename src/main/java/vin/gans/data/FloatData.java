@@ -20,11 +20,16 @@ public class FloatData implements  ParsedData, Comparable<Float> {
     }
 
     @Override
+    public String toString() {
+        return data.toString();
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null) return false;
-        Float floatData = (Float) o;
-
+        Float floatData = Float.valueOf(o.toString());
+        //return data == Float.valueOf(o.toString());
         return data != null ? data.equals(floatData) : floatData == null;
 
     }

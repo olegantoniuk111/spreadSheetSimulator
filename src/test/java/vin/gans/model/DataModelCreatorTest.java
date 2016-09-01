@@ -14,15 +14,13 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
-import static com.sun.xml.internal.ws.dump.LoggingDumpTube.Position.Before;
-
 /**
  * Created by DELL on 10.08.2016.
  */
-public class DataModelTest {
-    public DataModelTest() throws IOException {
+public class DataModelCreatorTest {
+    public DataModelCreatorTest() throws IOException {
     }
-    private  DataModel dataModel = new DataModel(TestData.filePath);
+    private DataModelCreator dataModel = new DataModelCreator(TestData.filePath);
     private String[][] fileData = dataModel.getDataModel();
     private Map<String, String> mappedData = dataModel.getMappedData();
     private String[][] expressions;

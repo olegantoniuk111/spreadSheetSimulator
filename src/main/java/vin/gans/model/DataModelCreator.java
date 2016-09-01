@@ -12,14 +12,14 @@ import java.util.Map;
 /**
  * Created by DELL on 09.08.2016.
  */
-public class DataModel {
+public class DataModelCreator {
     private String[][] data;
 
     private  Map<String, String> mappedData;
     private static  char currentLetter = 'A';
     private static  int currentrow = 1;
 
-    public DataModel(String filePath) throws IOException {
+    public DataModelCreator(String filePath) throws IOException {
         data = buildDataModel(filePath);
         mappedData =buildMapFromModel(data);
     }

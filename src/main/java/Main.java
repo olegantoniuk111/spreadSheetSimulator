@@ -1,9 +1,9 @@
 
 import vin.gans.data.*;
-import vin.gans.expression.ExpressionEvaluator;
+import vin.gans.model.DataAnalyzer;
 
-import vin.gans.model.DataModel;
-import vin.gans.model.DataParser;
+import vin.gans.simpleDataUtil.SimpleDataFactory;
+import vin.gans.model.DataModelCreator;
 
 import java.io.IOException;
 import java.util.Map;
@@ -15,19 +15,18 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         String filePath = "D:\\intellijProjects\\expressionevaluator\\resources\\input.csv";
-        DataModel model = new DataModel(filePath);
-        DataParser parser = new DataParser(model.getMappedData());
-        Map<String,ExpressionData> expressions = parser.getExpressionData();
-        Map<String, ParsedData> simpleData = parser.getSimpleData();
-        System.out.println(expressions.toString());
-        System.out.println(simpleData.toString());
+        DataModelCreator model = new DataModelCreator(filePath);
 
-        String expression = "10,5/7*5+A3+176.57";
-        String result = ExpressionEvaluator.separateExpression(expression);
-        System.out.println(result);
+        Map<String,String> expressions = DataAnalyzer.getExpressionData(model.getMappedData());
+        Map<String, String> simpleData = DataAnalyzer.getSimpleData(model.getMappedData());
+        Map<String, ParsedData> parsedSimpleData = SimpleDataFactory.createParsedData(simpleData);
+        System.out.println(parsedSimpleData.toString());
 
-        System.out.println(ExpressionEvaluator.isKey("A23"));
+        FloatData f = new FloatData("12.7");
+        Float f1 = 12.7f;
+        System.out.println( f.equals(12.7));
 
-
+        IntData i = new IntData("10");
+        System.out.println(i.equals(10));
     }
 }

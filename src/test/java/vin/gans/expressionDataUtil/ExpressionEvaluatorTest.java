@@ -1,4 +1,4 @@
-package vin.gans.expression;
+package vin.gans.expressionDataUtil;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
