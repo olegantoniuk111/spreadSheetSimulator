@@ -3,10 +3,6 @@ package vin.gans.model;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import vin.gans.data.ExpressionData;
-import vin.gans.data.IntData;
-import vin.gans.data.ParsedData;
-import vin.gans.data.TextData;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -20,12 +16,11 @@ public class DataAnalyzerTest {
     public DataAnalyzerTest() throws IOException {
     }
 
-    private DataModelCreator model = new DataModelCreator(TestData.filePath);
+    private Model model = new Model(TestData.filePath);
     private HashMap<String, String> simpleData;
     private HashMap<String, String> expressionsData;
 
     private LinkedHashMap<String, String> expressionsDataTest;
-
     private LinkedHashMap<String, String> simpleDataTest;
 
 
@@ -35,7 +30,7 @@ public class DataAnalyzerTest {
         expressionsData = DataAnalyzer.getExpressionData(model.getMappedData());
 
         simpleDataTest = new LinkedHashMap<>();
-        simpleDataTest.put("A1", "12");
+        simpleDataTest.put("A1", "12.5");
         simpleDataTest.put("C1", "3");
         simpleDataTest.put("D1", "'Sample");
         simpleDataTest.put("D2", "'Spread");

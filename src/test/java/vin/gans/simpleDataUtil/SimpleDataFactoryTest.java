@@ -8,7 +8,7 @@ import vin.gans.data.IntData;
 import vin.gans.data.ParsedData;
 import vin.gans.data.TextData;
 import vin.gans.model.DataAnalyzer;
-import vin.gans.model.DataModelCreator;
+import vin.gans.model.Model;
 import vin.gans.model.TestData;
 
 import java.io.IOException;
@@ -23,12 +23,12 @@ public class SimpleDataFactoryTest {
     }
     private HashMap<String , ParsedData> parsedData;
     private HashMap<String, ParsedData> parsedDataTest;
-    private DataModelCreator model = new DataModelCreator(TestData.filePath);
+    private Model model = new Model(TestData.filePath);
 
     @BeforeClass
     private void setUp(){
         parsedDataTest = new LinkedHashMap<>();
-        parsedDataTest.put("A1", new FloatData("12.7"));
+        parsedDataTest.put("A1", new FloatData("12.5"));
         parsedDataTest.put("C1", new IntData("3"));
         parsedDataTest.put("D1", new TextData("Sample"));
         parsedDataTest.put("D2", new TextData("Spread"));
@@ -40,6 +40,8 @@ public class SimpleDataFactoryTest {
     @Test
     public void createParsedDataTest(){
        parsedData = SimpleDataFactory.createParsedData(DataAnalyzer.getSimpleData(model.getMappedData()));
+        System.out.println(parsedData.toString());
+        System.out.println(parsedDataTest.toString());
         Assert.assertEquals(parsedData,parsedDataTest);
     }
 }

@@ -7,6 +7,7 @@ package vin.gans.model;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -17,22 +18,22 @@ import java.util.Set;
 /**
  * Created by DELL on 10.08.2016.
  */
-public class DataModelCreatorTest {
-    public DataModelCreatorTest() throws IOException {
+public class ModelTest {
+    public ModelTest() throws IOException {
     }
-    private DataModelCreator dataModel = new DataModelCreator(TestData.filePath);
-    private String[][] fileData = dataModel.getDataModel();
-    private Map<String, String> mappedData = dataModel.getMappedData();
+    private Model model = new Model(TestData.filePath);
+    private String[][] fileData = model.getData();
+    private Map<String, String> mappedData = model.getMappedData();
     private String[][] expressions;
     private Map<String, String> mapedExpressions;
 
     @BeforeClass
     public  void setUp() {
-        expressions = new String[][]{{"12", "=C2", "3", "'Sample"},
+        expressions = new String[][]{{"12.5", "=C2", "3", "'Sample"},
                 {"=A1+B1*C1/5", "=A2*B1", "=B3-C3", "'Spread"},
                 {"'Test", "=4-3", "5", "'Sheet"}};
         mapedExpressions = new LinkedHashMap<>();
-        mapedExpressions.put("A1", "12");
+        mapedExpressions.put("A1", "12.5");
         mapedExpressions.put("B1", "=C2");
         mapedExpressions.put("C1", "3");
         mapedExpressions.put("D1", "'Sample");
@@ -47,7 +48,7 @@ public class DataModelCreatorTest {
     }
     @Test
     public void checkingDataFromFile() throws IOException{
-        Assert.assertTrue(Arrays.deepEquals(fileData,expressions));
+        Assert.assertEquals(fileData,expressions);
 
     }
 

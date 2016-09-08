@@ -33,7 +33,7 @@ public class IntData implements ParsedData{
     }
 
     @Override
-    public Object getValue() {
+    public Integer getValue() {
         return data;
     }
 

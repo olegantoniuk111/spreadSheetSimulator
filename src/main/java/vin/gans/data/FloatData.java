@@ -9,10 +9,10 @@ public class FloatData implements  ParsedData, Comparable<Float> {
     private Float data;
 
     public FloatData(String cellData) {
-        this.data = Float.parseFloat(cellData);
+        this.data = Float.valueOf(cellData);
     }
     @Override
-    public Object getValue() {
+    public Float getValue() {
         return data;
     }
     public static boolean parseFloat(String string){
@@ -29,7 +29,6 @@ public class FloatData implements  ParsedData, Comparable<Float> {
         if (this == o) return true;
         if (o == null) return false;
         Float floatData = Float.valueOf(o.toString());
-        //return data == Float.valueOf(o.toString());
         return data != null ? data.equals(floatData) : floatData == null;
 
     }

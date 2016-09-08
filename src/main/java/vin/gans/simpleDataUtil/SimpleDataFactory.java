@@ -17,7 +17,6 @@ public class SimpleDataFactory {
     public static HashMap<String, ParsedData> createParsedData(Map<String, String> simpleData) {
         parsedData = new LinkedHashMap<>();
         Map.Entry<String, String> entry;
-
         Iterator<Map.Entry<String, String>> iterator = simpleData.entrySet().iterator();
         while (iterator.hasNext()) {
             entry = iterator.next();

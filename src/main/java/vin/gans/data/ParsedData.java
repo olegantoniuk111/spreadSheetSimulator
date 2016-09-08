@@ -8,5 +8,7 @@ public interface ParsedData  {
     public Object getValue();
 
 
+
+
 }
 
