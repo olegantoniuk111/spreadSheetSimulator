@@ -1,10 +1,11 @@
 package vin.gans.expressionDataUtil;
 
-import vin.gans.data.ExpressionData;
 import vin.gans.data.FloatData;
 import vin.gans.data.IntData;
 import vin.gans.data.ParsedData;
-import vin.gans.exception.DataParseException;
+import vin.gans.data.TextData;
+import vin.gans.exception.NonExistentCellException;
+
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -21,7 +22,14 @@ public class ExpressionDataFactory {
         expressionData = new LinkedHashMap<>();
         Set<String> keys = expressions.keySet();
         for(String key :keys){
-            Float evaluatedCell = evaluator.evaluate(expressions.get(key));
+            Float evaluatedCell = null;
+            try {
+                evaluatedCell = evaluator.evaluate(expressions.get(key));
+            } catch (NonExistentCellException e) {
+                expressionData.put(key,new TextData("# can't parse" + e.getMessage()));
+                continue;
+                //e.printStackTrace();
+            }
             if (evaluatedCell%1 > 0)
             expressionData.put(key, new FloatData(evaluatedCell.toString()));
             else {

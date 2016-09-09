@@ -28,10 +28,11 @@ public class SpreadSheetSimulator {
         this.evaluatedData = createEvaluatedData(model);
     }
 
-    private Map<String , ParsedData> createEvaluatedData(Model model){
+    private Map<String, ParsedData> createEvaluatedData(Model model){
         Map<String, String> simpleData = DataAnalyzer.getSimpleData(model.getMappedData());
         Map<String,String> expressions = DataAnalyzer.getExpressionData(model.getMappedData());
         Set<String> keys = model.getMappedData().keySet();
+
         Map<String, ParsedData> parsedSimpleData = SimpleDataFactory.createParsedData(simpleData);
         ExpressionEvaluator evaluator = new ExpressionEvaluator(parsedSimpleData,expressions);
         Map<String,ParsedData> parsedExpressionData = ExpressionDataFactory.parseExpressions(expressions,evaluator);

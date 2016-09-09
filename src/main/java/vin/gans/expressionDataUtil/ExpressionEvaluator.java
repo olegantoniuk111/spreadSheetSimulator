@@ -4,7 +4,8 @@ import vin.gans.data.ExpressionData;
 import vin.gans.data.FloatData;
 import vin.gans.data.IntData;
 import vin.gans.data.ParsedData;
-import vin.gans.exception.DataParseException;
+import vin.gans.exception.NonExistentCellException;
+
 
 import java.util.*;
 import java.util.regex.Matcher;
@@ -62,7 +63,7 @@ public class ExpressionEvaluator {
     }
 
 
-    public Float evaluate(String data){
+    public Float evaluate(String data) throws NonExistentCellException {
         Deque<String> stack = createStackFromExpression(data);
         Stack <Float> result = new Stack<>();
         result.push(0.0f);
@@ -76,6 +77,10 @@ public class ExpressionEvaluator {
                 number = evaluate(expressionData.get(expression));
                 result.push(number + result.pop());
             }
+            else if (isKey(expression)&& !parsedSimpleData.containsKey(expression) && !expressionData.containsKey(expression)){
+                throw new NonExistentCellException(expression);
+            }
+
             else if(IntData.parseInt(expression)){
                 number = Float.parseFloat(expression);
                 result.push(number + result.pop());
@@ -94,13 +99,11 @@ public class ExpressionEvaluator {
                 }else if (expression.equals("*")){
                     number = result.pop() * evaluate(stack.pop()) ;
                     result.push(number);
-                }else if (expression.equals("/")){
-                    number = result.pop() / evaluate(stack.pop()) ;
+                }else if (expression.equals("/")) {
+                    number = result.pop() / evaluate(stack.pop());
                     result.push(number);
                 }
-
             }
-
         }
         return result.pop();
         }

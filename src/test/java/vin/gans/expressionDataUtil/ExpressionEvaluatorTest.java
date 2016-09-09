@@ -55,13 +55,9 @@ public class ExpressionEvaluatorTest {
     public void evaluateTest(){
         Assert.assertTrue(-4.0 == testEvaluator.evaluate("C2"));
         Assert.assertTrue(testEvaluator.evaluate("A1+B1*C1/5").equals(Float.valueOf("5.1")));
-         Assert.assertTrue(testEvaluator.evaluate("A2*B1").equals(Float.valueOf("-20.4")));
+        Assert.assertTrue(testEvaluator.evaluate("A2*B1").equals(Float.valueOf("-20.4")));
         Assert.assertTrue(-4.0== testEvaluator.evaluate("B3-C3").intValue());
-         Assert.assertTrue(testEvaluator.evaluate("4-3")==1);
-        testEvaluator.evaluate("B3-C3");
-        testEvaluator.evaluate("4-3");
-
-        System.out.println(expressionData.toString());
+        Assert.assertTrue(testEvaluator.evaluate("4-3")==1);
 
     }
 }

@@ -13,8 +13,8 @@ public class Model {
     private String[][] data;
     private String [][] coordinates;
     private  Map<String, String> mappedData;
-    private static  char currentLetter = 'A';
-    private static  int currentrow;
+    private static char currentLetter = 'A';
+    private static int currentrow;
 
     public Model(String filePath) throws IOException {
         data = createDataModel(filePath);
