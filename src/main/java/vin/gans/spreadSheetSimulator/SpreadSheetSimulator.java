@@ -21,7 +21,7 @@ public class SpreadSheetSimulator {
         return evaluatedData;
     }
 
-    private Map <String , ParsedData> evaluatedData;
+    private Map <String ,ParsedData> evaluatedData;
 
     public SpreadSheetSimulator(Model model) {
         this.model = model;

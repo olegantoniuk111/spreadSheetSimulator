@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import vin.gans.data.ParsedData;
+import vin.gans.exception.NonExistentCellException;
 import vin.gans.model.DataAnalyzer;
 import vin.gans.model.Model;
 import vin.gans.model.TestData;
@@ -52,7 +53,7 @@ public class ExpressionEvaluatorTest {
         }
 
     @Test
-    public void evaluateTest(){
+    public void evaluateTest() throws NonExistentCellException {
         Assert.assertTrue(-4.0 == testEvaluator.evaluate("C2"));
         Assert.assertTrue(testEvaluator.evaluate("A1+B1*C1/5").equals(Float.valueOf("5.1")));
         Assert.assertTrue(testEvaluator.evaluate("A2*B1").equals(Float.valueOf("-20.4")));

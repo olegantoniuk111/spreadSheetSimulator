@@ -31,13 +31,13 @@ import vin.gans.model.Model;
                 testSimulator = new SpreadSheetSimulator(testModel);
 
                 evaluatedTestData = new LinkedHashMap<>();
-                evaluatedTestData.put("A1",new IntData("12"));
+                evaluatedTestData.put("A1",new FloatData("12.5"));
                 evaluatedTestData.put("B1",new IntData("-4"));
                 evaluatedTestData.put("C1",new IntData("3"));
                 evaluatedTestData.put("D1",new TextData("Sample"));
 
-        evaluatedTestData.put("A2",new FloatData("4.8"));
-        evaluatedTestData.put("B2",new IntData("-19"));
+        evaluatedTestData.put("A2",new FloatData("5.1"));
+        evaluatedTestData.put("B2",new FloatData("-20.4"));
         evaluatedTestData.put("C2",new IntData("-4"));
         evaluatedTestData.put("D2",new TextData("Spread"));
 

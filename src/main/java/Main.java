@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) throws IOException, NonExistentCellException {
 
         String filePath = "resources\\input.csv";
-       // String filePath = "resources\\testResources\\testinput.csv";
+        //String filePath = "resources\\testResources\\testinput.csv";
         Model model = new Model(filePath);
         SpreadSheetSimulator simulator = new SpreadSheetSimulator(model);
         simulator.printEvaluatedData();

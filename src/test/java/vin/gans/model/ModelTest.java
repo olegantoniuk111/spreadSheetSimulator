@@ -21,14 +21,17 @@ import java.util.Set;
 public class ModelTest {
     public ModelTest() throws IOException {
     }
-    private Model model = new Model(TestData.filePath);
-    private String[][] fileData = model.getData();
-    private Map<String, String> mappedData = model.getMappedData();
+    private Model model;
+    private String[][] fileData;
+    private Map<String, String> mappedData;
     private String[][] expressions;
     private Map<String, String> mapedExpressions;
 
     @BeforeClass
-    public  void setUp() {
+    public  void setUp() throws IOException {
+        model = new Model(TestData.filePath);
+        fileData = model.getData();
+        mappedData = model.getMappedData();
         expressions = new String[][]{{"12.5", "=C2", "3", "'Sample"},
                 {"=A1+B1*C1/5", "=A2*B1", "=B3-C3", "'Spread"},
                 {"'Test", "=4-3", "5", "'Sheet"}};
@@ -48,7 +51,11 @@ public class ModelTest {
     }
     @Test
     public void checkingDataFromFile() throws IOException{
-        Assert.assertEquals(fileData,expressions);
+        for(int i=0;i<fileData.length;i++){
+            for (int j=0;j<fileData[i].length;j++){
+                Assert.assertEquals(fileData[i][j].toString(), expressions[i][j].toString());
+            }
+        }
 
     }
 
