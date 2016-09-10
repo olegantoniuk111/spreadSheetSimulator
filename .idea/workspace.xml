@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55d76a61-d6db-4083-8fb7-d2c4c7204ce3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vin/gans/exception/NonExistentCellException.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/vin/gans/exception/DataParseException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/vin/gans/exception/DataParseException.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Main.class" afterPath="$PROJECT_DIR$/build/classes/main/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/vin/gans/expressionDataUtil/ExpressionDataFactory.class" afterPath="$PROJECT_DIR$/build/classes/main/vin/gans/expressionDataUtil/ExpressionDataFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/vin/gans/expressionDataUtil/ExpressionEvaluator.class" afterPath="$PROJECT_DIR$/build/classes/main/vin/gans/expressionDataUtil/ExpressionEvaluator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/vin/gans/spreadSheetSimulator/SpreadSheetSimulator.class" afterPath="$PROJECT_DIR$/build/classes/main/vin/gans/spreadSheetSimulator/SpreadSheetSimulator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/vin/gans/expressionDataUtil/ExpressionEvaluatorTest.class" afterPath="$PROJECT_DIR$/build/classes/test/vin/gans/expressionDataUtil/ExpressionEvaluatorTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vin/gans/expressionDataUtil/ExpressionDataFactory.java" afterPath="$PROJECT_DIR$/src/main/java/vin/gans/expressionDataUtil/ExpressionDataFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vin/gans/expressionDataUtil/ExpressionEvaluator.java" afterPath="$PROJECT_DIR$/src/main/java/vin/gans/expressionDataUtil/ExpressionEvaluator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vin/gans/model/Model.java" afterPath="$PROJECT_DIR$/src/main/java/vin/gans/model/Model.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vin/gans/spreadSheetSimulator/SpreadSheetSimulator.java" afterPath="$PROJECT_DIR$/src/main/java/vin/gans/spreadSheetSimulator/SpreadSheetSimulator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/vin/gans/expressionDataUtil/ExpressionEvaluatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/vin/gans/expressionDataUtil/ExpressionEvaluatorTest.java" />
     </list>
     <ignored path="ExpressionEvaluator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,14 +64,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpreadSheetSimulator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/vin/gans/spreadSheetSimulator/SpreadSheetSimulator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,8 +99,8 @@
       <file leaf-file-name="ExpressionDataFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/vin/gans/expressionDataUtil/ExpressionDataFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="28" column="70" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+            <state relative-caret-position="300">
+              <caret line="36" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -475,12 +475,12 @@
         <option value="$PROJECT_DIR$/src/test/java/vin/gans/expressionDataUtil/ExpressionEvaluatorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/vin/gans/exception/DataParseException.java" />
         <option value="$PROJECT_DIR$/src/main/java/vin/gans/model/Model.java" />
-        <option value="$PROJECT_DIR$/src/main/java/vin/gans/spreadSheetSimulator/SpreadSheetSimulator.java" />
         <option value="$PROJECT_DIR$/src/main/java/vin/gans/expressionDataUtil/ExpressionEvaluator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/vin/gans/expressionDataUtil/ExpressionDataFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/vin/gans/exception/NonExistentCellException.java" />
         <option value="$PROJECT_DIR$/resources/input.csv" />
+        <option value="$PROJECT_DIR$/src/main/java/vin/gans/expressionDataUtil/ExpressionDataFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/vin/gans/spreadSheetSimulator/SpreadSheetSimulator.java" />
       </list>
     </option>
   </component>
@@ -527,22 +527,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Tests">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ExpressionEvaluator">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -777,6 +761,22 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Tests">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ExpressionEvaluator">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1414,7 +1414,9 @@
       <workItem from="1473340784599" duration="2386000" />
       <workItem from="1473415096417" duration="1731000" />
       <workItem from="1473416883571" duration="1804000" />
-      <workItem from="1473419053508" duration="62000" />
+      <workItem from="1473419053508" duration="652000" />
+      <workItem from="1473441542440" duration="628000" />
+      <workItem from="1473515360015" duration="782000" />
     </task>
     <servers />
   </component>
@@ -1451,7 +1453,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206843000" />
+    <option name="totallyTimeSpent" value="208843000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1463,7 +1465,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1471,10 +1473,10 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3269663" sideWeight="0.47890624" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3218391" sideWeight="0.40629575" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3218391" sideWeight="0.4136164" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3218391" sideWeight="0.5937042" order="2" side_tool="false" content_ui="tabs" x="-73" y="416" width="1366" height="207" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3218391" sideWeight="0.5863836" order="2" side_tool="false" content_ui="tabs" x="-73" y="416" width="1366" height="207" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1692,14 +1694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vin/gans/spreadSheetSimulator/SpreadSheetSimulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="36" column="94" selection-start-line="36" selection-start-column="94" selection-end-line="36" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vin/gans/model/DataAnalyzer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1721,20 +1715,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/vin/gans/expressionDataUtil/ExpressionDataFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="70" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/vin/gans/exception/NonExistentCellException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vin/gans/expressionDataUtil/ExpressionDataFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="36" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1748,11 +1742,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/vin/gans/spreadSheetSimulator/SpreadSheetSimulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

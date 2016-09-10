@@ -30,10 +30,11 @@ public class ExpressionDataFactory {
                 continue;
                 //e.printStackTrace();
             }
-            if (evaluatedCell%1 > 0)
-            expressionData.put(key, new FloatData(evaluatedCell.toString()));
-            else {
+            if (evaluatedCell%1 == 0)
                 expressionData.put(key,new IntData(String.valueOf(evaluatedCell.intValue())));
+            else {
+                expressionData.put(key, new FloatData(evaluatedCell.toString()));
+
             }
         }
         return expressionData;
