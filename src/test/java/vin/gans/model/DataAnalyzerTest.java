@@ -13,19 +13,17 @@ import java.util.Set;
  * Created by DELL on 01.09.2016.
  */
 public class DataAnalyzerTest {
-    public DataAnalyzerTest() throws IOException {
-    }
 
-    private Model model = new Model(TestData.filePath);
+    private Model model;
     private HashMap<String, String> simpleData;
     private HashMap<String, String> expressionsData;
 
     private LinkedHashMap<String, String> expressionsDataTest;
     private LinkedHashMap<String, String> simpleDataTest;
 
-
     @BeforeClass
     public void setUp() throws IOException {
+        model = new Model(TestData.filePath);
         simpleData = DataAnalyzer.getSimpleData(model.getMappedData());
         expressionsData = DataAnalyzer.getExpressionData(model.getMappedData());
 
@@ -44,21 +42,19 @@ public class DataAnalyzerTest {
         expressionsDataTest.put("B2", "A2*B1");
         expressionsDataTest.put("C2", "B3-C3");
         expressionsDataTest.put("B3", "4-3");
-
     }
     @Test
-    public void testSimpleData() {
+    public void checkSimpleData() {
         org.testng.Assert.assertEquals(simpleData.keySet(), simpleDataTest.keySet());
         org.testng.Assert.assertEquals(simpleData.values(), simpleDataTest.values());
         Set<String> keySet = simpleData.keySet();
-
         for (String key : keySet) {
             org.testng.Assert.assertEquals(simpleData.get(key), simpleDataTest.get(key));
         }
     }
 
     @Test
-    public void testExpressions(){
+    public void checkExpressions(){
         Assert.assertEquals(expressionsData.keySet(), expressionsDataTest.keySet());
         Set<String> keySet = expressionsData.keySet();
         for(String key : keySet){

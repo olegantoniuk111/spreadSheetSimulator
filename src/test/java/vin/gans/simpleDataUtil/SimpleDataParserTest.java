@@ -18,15 +18,15 @@ import java.util.LinkedHashMap;
 /**
  * Created by DELL on 01.09.2016.
  */
-public class SimpleDataFactoryTest {
-    public SimpleDataFactoryTest() throws IOException {
-    }
+public class SimpleDataParserTest {
+
     private HashMap<String , ParsedData> parsedData;
     private HashMap<String, ParsedData> parsedDataTest;
-    private Model model = new Model(TestData.filePath);
+    private Model model;
 
     @BeforeClass
-    private void setUp(){
+    private void setUp() throws IOException {
+        model  = new Model(TestData.filePath);
         parsedDataTest = new LinkedHashMap<>();
         parsedDataTest.put("A1", new FloatData("12.5"));
         parsedDataTest.put("C1", new IntData("3"));
@@ -38,8 +38,8 @@ public class SimpleDataFactoryTest {
     }
 
     @Test
-    public void createParsedDataTest(){
-       parsedData = SimpleDataFactory.createParsedData(DataAnalyzer.getSimpleData(model.getMappedData()));
+    public void checkSimpleParsedData(){
+       parsedData = SimpleDataParser.createParsedData(DataAnalyzer.getSimpleData(model.getMappedData()));
         System.out.println(parsedData.toString());
         System.out.println(parsedDataTest.toString());
         Assert.assertEquals(parsedData,parsedDataTest);

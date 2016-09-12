@@ -10,9 +10,10 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException, NonExistentCellException {
-
-        String filePath = "resources\\input.csv";
-        //String filePath = "resources\\testResources\\testinput.csv";
+        /*
+        Input data for evaluation into input.csv file.
+         */
+        String  filePath = "resources\\input.csv";
         Model model = new Model(filePath);
         SpreadSheetSimulator simulator = new SpreadSheetSimulator(model);
         simulator.printEvaluatedData();

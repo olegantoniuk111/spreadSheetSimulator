@@ -1,11 +1,11 @@
 package vin.gans.spreadSheetSimulator;
 
 import vin.gans.data.ParsedData;
-import vin.gans.expressionDataUtil.ExpressionDataFactory;
+import vin.gans.expressionDataUtil.ExpressionDataParser;
 import vin.gans.expressionDataUtil.ExpressionEvaluator;
 import vin.gans.model.DataAnalyzer;
 import vin.gans.model.Model;
-import vin.gans.simpleDataUtil.SimpleDataFactory;
+import vin.gans.simpleDataUtil.SimpleDataParser;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -33,9 +33,9 @@ public class SpreadSheetSimulator {
         Map<String,String> expressions = DataAnalyzer.getExpressionData(model.getMappedData());
         Set<String> keys = model.getMappedData().keySet();
 
-        Map<String, ParsedData> parsedSimpleData = SimpleDataFactory.createParsedData(simpleData);
+        Map<String, ParsedData> parsedSimpleData = SimpleDataParser.createParsedData(simpleData);
         ExpressionEvaluator evaluator = new ExpressionEvaluator(parsedSimpleData,expressions);
-        Map<String,ParsedData> parsedExpressionData = ExpressionDataFactory.parseExpressions(expressions,evaluator);
+        Map<String,ParsedData> parsedExpressionData = ExpressionDataParser.parseExpressions(expressions,evaluator);
 
          evaluatedData = new LinkedHashMap<>();
         for(String key : keys){

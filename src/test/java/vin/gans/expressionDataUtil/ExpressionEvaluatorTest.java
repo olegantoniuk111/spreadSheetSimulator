@@ -8,7 +8,7 @@ import vin.gans.exception.NonExistentCellException;
 import vin.gans.model.DataAnalyzer;
 import vin.gans.model.Model;
 import vin.gans.model.TestData;
-import vin.gans.simpleDataUtil.SimpleDataFactory;
+import vin.gans.simpleDataUtil.SimpleDataParser;
 
 import java.io.IOException;
 import java.util.Map;
@@ -25,27 +25,27 @@ public class ExpressionEvaluatorTest {
     @BeforeClass
     void setUp() throws IOException {
         testModel = new Model(TestData.filePath);
-        parsedSimpleData = SimpleDataFactory.createParsedData(testModel.getMappedData());
+        parsedSimpleData = SimpleDataParser.createParsedData(testModel.getMappedData());
         expressionData = DataAnalyzer.getExpressionData(testModel.getMappedData());
         testEvaluator = new ExpressionEvaluator(parsedSimpleData,expressionData);
 
     }
 
     @Test
-    public void separateExpressionTest(){
+    public void separateExpression(){
         String expression = "A1+10*B4/17+C7";
         String result = "A1 + 10 * B4 / 17 + C7 ";
         Assert.assertEquals(ExpressionEvaluator.separateExpression(expression), result);
     }
     @Test
-    public void isKeyTest() {
+    public void isKey() {
         String[] keys = new String[]{"A1", "AB23", "B1475", "AA59"};
         for (String str : keys) {
             Assert.assertTrue(ExpressionEvaluator.isKey(str));
         }
     }
     @Test
-    public void isOperatorTest(){
+    public void isOperator(){
             String [] operators = new String[]{"+","-","*","/"};
             for(String operator: operators){
                 Assert.assertTrue(ExpressionEvaluator.isOperator(operator));
@@ -53,7 +53,7 @@ public class ExpressionEvaluatorTest {
         }
 
     @Test
-    public void evaluateTest() throws NonExistentCellException {
+    public void evaluate() throws NonExistentCellException {
         Assert.assertTrue(-4.0 == testEvaluator.evaluate("C2"));
         Assert.assertTrue(testEvaluator.evaluate("A1+B1*C1/5").equals(Float.valueOf("5.1")));
         Assert.assertTrue(testEvaluator.evaluate("A2*B1").equals(Float.valueOf("-20.4")));

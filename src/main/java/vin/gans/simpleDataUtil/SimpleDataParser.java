@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * Created by DELL on 01.09.2016.
  */
-public class SimpleDataFactory {
+public class SimpleDataParser {
 
     private static HashMap<String, ParsedData> parsedData;
 

@@ -15,7 +15,7 @@ import java.util.Set;
 /**
  * Created by DELL on 01.09.2016.
  */
-public class ExpressionDataFactory {
+public class ExpressionDataParser {
     private static HashMap<String, ParsedData> expressionData;
 
     public static Map<String, ParsedData> parseExpressions(Map<String,String> expressions,ExpressionEvaluator evaluator){

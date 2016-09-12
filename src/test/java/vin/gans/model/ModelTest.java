@@ -19,8 +19,7 @@ import java.util.Set;
  * Created by DELL on 10.08.2016.
  */
 public class ModelTest {
-    public ModelTest() throws IOException {
-    }
+
     private Model model;
     private String[][] fileData;
     private Map<String, String> mappedData;
@@ -56,17 +55,11 @@ public class ModelTest {
                 Assert.assertEquals(fileData[i][j].toString(), expressions[i][j].toString());
             }
         }
-
     }
-
     @Test
-    public void checkDataMapping() throws IOException{
+    public void checkMappedDataFromFile() throws IOException{
         Set<Map.Entry<String, String>> entry =  mappedData.entrySet();
         Set<Map.Entry<String, String>> entry1 =  mapedExpressions.entrySet();
         Assert.assertEquals(entry,entry1);
     }
-
-
-
-
 }
